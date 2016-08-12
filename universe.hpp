@@ -6,7 +6,7 @@ class Universe {
 		std::vector<SolarSystem> chunks;
 		Universe();
 	public:
-		void load(Player &player);
+		void load();
 		void tick(float dt);
 		void draw();
 };
