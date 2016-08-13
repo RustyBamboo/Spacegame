@@ -1,5 +1,8 @@
 #ifndef CSCREENS_HPP
 #define CSCREENS_HPP
+
+#include <SFML/Graphics.hpp>
+
 class cScreen
 {
 public :

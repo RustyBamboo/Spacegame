@@ -8,6 +8,7 @@ screen_1::screen_1(void)
 
 int screen_1::Run(sf::RenderWindow &App)
 {
+	float dt;
     sf::Event Event;
     bool Running = true;
 
@@ -27,7 +28,7 @@ int screen_1::Run(sf::RenderWindow &App)
         //Clearing screen
         App.clear(sf::Color(0, 0, 0, 0));
         //Drawing
-		universe.draw();
+		universe.draw(App);
         App.display();
     }
 

@@ -3,6 +3,8 @@
 
 #include <SFML/Graphics.hpp>
 
+#include "universe.hpp"
+
 class screen_1 : public cScreen
 {
 private:
