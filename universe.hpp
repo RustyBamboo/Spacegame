@@ -11,7 +11,7 @@ class Universe {
 	public:
 		Universe();
 		void load();
-		void tick(float dt);
+		void tick(float &dt);
 		void draw(sf::RenderWindow &window);
 };
 

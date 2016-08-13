@@ -10,6 +10,10 @@ class Celestial {
 		float getY();
 		float getVX();
 		float getVY();
+		int getMass();
+		float getDistance(Celestial *cel);
+		float getDistanceX(Celestial *cel);
+		float getDistanceY(Celestial *cel);
 };
 
 

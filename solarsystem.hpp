@@ -12,8 +12,9 @@ class SolarSystem {
     std::vector<Planet> planets;
   public:
   	SolarSystem();
-  	void tick();
+  	void tick(float &dt);
 	void draw(sf::RenderWindow &window);
+	
 };
 
 #endif

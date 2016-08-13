@@ -11,7 +11,9 @@ class Star : public Celestial {
 		Star();
 		Star(float x, float y);
 		
+		void tick(float &dt);
 		void draw(sf::RenderWindow &window);
+		void set(float x, float y);
 		
 };
 

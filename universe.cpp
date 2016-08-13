@@ -7,8 +7,8 @@ void Universe::load() {
 	chunks.push_back(testSystem);
 }
 
-void Universe::tick(float dt) {
-	std::cout<<dt<<std::endl;
+void Universe::tick(float &dt) {
+	chunks[0].tick(dt);
 }
 
 void Universe::draw(sf::RenderWindow &window) {

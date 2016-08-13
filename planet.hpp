@@ -7,9 +7,11 @@
 class Planet : public Celestial {
   private:
   	sf::CircleShape shape;
+	float starX, starY, starMass;
   public:
   	Planet();
-    void load(Star &star);
+  	void tick(float &dt);
+    void load(float starX, float starY, int starMass);
     void draw(sf::RenderWindow &window);
 };
 
