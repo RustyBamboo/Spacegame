@@ -14,10 +14,12 @@ void Planet::load(float starX, float starY, int starMass) {
 	this->x = x;
 	this->y = y;
 	
-	shape.setRadius(rand()%20 + 10);
+
 	shape.setPosition({x,y});
 	
-	this->mass = rand()%5 + 1;
+	this->mass = rand()%20 + 10;
+	shape.setRadius(this->mass);
+	
 	
 	this->starX = starX;
 	this->starY = starY;
@@ -30,18 +32,16 @@ void Planet::load(float starX, float starY, int starMass) {
 }
 
 void Planet::tick(float &dt) {
-	
-	float dx = x - starX;
-	float dy = y - starY;
+	float dx = x - starX + mass;
+	float dy = y - starY + mass;
 	
 	float d = sqrt(dx*dx + dy*dy);
 	
-	float vv = sqrt(0.001*starMass / d);
+	float vv = sqrt(0.01*starMass / d);
 
-	vx = vv * dx / d;
-	vy = vv * dy / d;
+	vx = vv * (dy / d);
+	vy = vv * (-dx / d);
 	
-	std::cout<<vv<<std::endl;
 //	float d = getDistance(this->star);
 ////	std::cout<<d<<std::endl;
 //	float vv = starMass / d;

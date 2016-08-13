@@ -1,6 +1,5 @@
 #include "celestial.hpp"
 
-#include "include.hpp"
 
 float Celestial::getX() { return x; }
 float Celestial::getY() { return y; }
@@ -19,3 +18,6 @@ float Celestial::getDistance(Celestial *cel) {
 float Celestial::getDistanceX(Celestial *cel) { return x - cel->getX(); }
 
 float Celestial::getDistanceY(Celestial *cel) { return y - cel->getY(); }
+
+void Celestial::draw(sf::RenderWindow &window){}
+void Celestial::tick(float &dt) {}

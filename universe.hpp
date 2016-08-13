@@ -4,9 +4,12 @@
 #include "include.hpp"
 #include <iostream>
 #include "solarsystem.hpp"
+#include "player.hpp"
 
-class Universe {
+class Universe  {
 	private:
+		sf::View view;
+		Player player;
 		std::vector<SolarSystem> chunks;
 	public:
 		Universe();

@@ -1,6 +1,8 @@
 #ifndef CELESTIAL_HPP
 #define CELESTIAL_HPP
 
+#include "include.hpp"
+
 class Celestial {
 	protected:
 		float x, y, vx, vy, ax, ay;
@@ -14,6 +16,9 @@ class Celestial {
 		float getDistance(Celestial *cel);
 		float getDistanceX(Celestial *cel);
 		float getDistanceY(Celestial *cel);
+		
+		virtual void draw(sf::RenderWindow &window) =0;
+		virtual void tick(float &dt) =0;
 };
 
 
